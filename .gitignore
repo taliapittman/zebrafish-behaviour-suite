@@ -1,0 +1,1 @@
+# .gitignore# Byte-compiled / optimized / DLL files__pycache__/*.py[cod]# Virtual environment files.venv/venv/env/# Data and output folders*.csvbhvparams/
