@@ -1,1 +1,35 @@
-# .gitignore# Byte-compiled / optimized / DLL files__pycache__/*.py[cod]# Virtual environment files.venv/venv/env/# Data and output folders*.csvbhvparams/
+# ----------------------------------------
+# 1. Byte-compiled / Optimized files
+# ----------------------------------------
+# Compiled Python files
+__pycache__/
+*.py[cod]
+
+# ----------------------------------------
+# 2. Virtual Environments
+# ----------------------------------------
+# Standard virtual environment folder names
+.venv/
+venv/
+env/
+
+# ----------------------------------------
+# 3. Packaging and Testing Artifacts
+# ----------------------------------------
+# Python package metadata (from pip install -e .)
+*.egg-info/
+*.egg
+
+# pytest cache
+.pytest_cache/
+
+# Distribution and build folders
+/dist/
+/build/
+
+# ----------------------------------------
+# 4. Data and Output Folders
+# ----------------------------------------
+# IGNORE specific output folders (recommended)
+tests/test_output/
+/data/output/
