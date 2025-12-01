@@ -33,3 +33,10 @@ env/
 # IGNORE specific output folders (recommended)
 tests/test_output/
 /data/output/
+
+# ----------------------------------------
+# 5. OS and IDE Files
+# ----------------------------------------
+.DS_Store             # <-- ADD THIS LINE HERE
+.vscode/
+.spyderproject
