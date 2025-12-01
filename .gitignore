@@ -37,6 +37,6 @@ tests/test_output/
 # ----------------------------------------
 # 5. OS and IDE Files
 # ----------------------------------------
-.DS_Store             # <-- ADD THIS LINE HERE
+.DS_Store            
 .vscode/
 .spyderproject
