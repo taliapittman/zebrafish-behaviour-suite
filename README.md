@@ -225,6 +225,58 @@ results = dabest_shared_control(
 
 ---
 
+### 4. Effect Size Analysis with `dabest_multi_group()`
+
+Compare multiple treatment-control pairs where each treatment has its own paired control.
+
+**Input:** Same as `dabest_shared_control()`
+
+**Output:** PDF plots and statistical summaries
+```python
+from zf_bhv_suite import dabest_multi_group
+
+# Basic multi-group analysis
+results = dabest_multi_group(
+    input_data='/path/to/data',
+    time_windows='reboundSleep_min.hr',
+    comparison_pairs={
+        'wt_drug': 'wt_baseline',
+        'mut_drug': 'mut_baseline',
+        'het_drug': 'het_baseline'
+    },
+    output_dir='/path/to/results'
+)
+
+# With custom colours
+results = dabest_multi_group(
+    input_data='/path/to/data',
+    time_windows=['avgDay'],
+    comparison_pairs={
+        'treated1': 'control1',
+        'treated2': 'control2'
+    },
+    output_dir='/path/to/results',
+    colour_palette={
+        'control1': '#cccccc',
+        'treated1': '#ff6b6b',
+        'control2': '#999999',
+        'treated2': '#4ecdc4'
+    }
+)
+```
+
+**Parameters:**
+- Same as `dabest_shared_control()` except:
+  - `comparison_pairs`: Dict mapping treatment groups to their controls
+    - Format: `{treatment_group: control_group}`
+    - Example: `{'wt_PTZ': 'wt_cntrl', 'mut_PTZ': 'mut_cntrl'}`
+
+**Outputs:**
+- Same structure as `dabest_shared_control()`
+- Each comparison pair analysed independently
+
+---
+
 ## Complete Example Workflow
 ```python
 from zf_bhv_suite import avgDayNight, normalise_data, dabest_shared_control
